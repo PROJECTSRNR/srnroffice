@@ -1,37 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#194887">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#163f7e">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="robots" content="noindex, nofollow">
-  <meta http-equiv="refresh" content="1;url=https://script.google.com/macros/s/AKfycbzXQ-Q4MWWuo9Y0YGVjRjFZr9xBobVsiC1lzKfPKaaG_0YVDA-4OyIRGdtY_fv1L_ok/exec">
-  <link rel="icon" type="image/png" href="./srnr-logo.png">
-  <title>SRNR OFFICE — กำลังเข้าสู่ระบบ</title>
+  <title>SRNR OFFICE | วิทยาลัยเทคนิคสุรนารี</title>
+  <link rel="icon" type="image/png" href="./favicon.png">
   <style>
-    :root { color-scheme: light; }
-    * { box-sizing: border-box; }
-    html,body { margin:0; min-height:100%; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
-    body { min-height:100vh; display:grid; place-items:center; background:linear-gradient(125deg,#163d7b,#3b78c8); color:#183b67; }
-    main { width:min(330px,calc(100% - 34px)); background:white; border-radius:18px; text-align:center; padding:28px 26px; box-shadow:0 18px 45px #001e4540; }
-    img { display:block; margin:0 auto 12px; width:70px; height:70px; object-fit:contain; }
-    h1 { font-size:23px; margin:0; letter-spacing:.2px; }
-    h1 span { color:#e3a63b; }
-    p { color:#61748d; font-size:14px; line-height:1.7; }
-    a { display:block; margin-top:16px; background:#255db4; color:white; font-size:14px; font-weight:700; text-decoration:none; border-radius:9px; padding:12px; }
-    a:focus-visible { outline:3px solid #e3a63b; outline-offset:3px; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+    body { background: linear-gradient(120deg, #163e7d 0%, #3673c2 100%); }
+    #srnr-office {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      display: block;
+      background: transparent;
+    }
   </style>
 </head>
 <body>
-  <main>
-    <img src="./srnr-logo.png" alt="ตราวิทยาลัยเทคนิคสุรนารี" width="70" height="70">
-    <h1>SRNR <span>OFFICE</span></h1>
-    <p>กำลังเปิดหน้ารหัสผ่านของระบบโดยอัตโนมัติ…</p>
-    <a href="https://script.google.com/macros/s/AKfycbzXQ-Q4MWWuo9Y0YGVjRjFZr9xBobVsiC1lzKfPKaaG_0YVDA-4OyIRGdtY_fv1L_ok/exec">เปิด SRNR OFFICE</a>
-  </main>
-  <script>
-    // GitHub Pages hosts only the short link. The real app remains on Apps Script.
-    window.location.replace('https://script.google.com/macros/s/AKfycbzXQ-Q4MWWuo9Y0YGVjRjFZr9xBobVsiC1lzKfPKaaG_0YVDA-4OyIRGdtY_fv1L_ok/exec');
-  </script>
+  <!-- The REAL working SRNR OFFICE login, dashboard and forms are served inside
+       this full-page frame. No redirect: the browser URL stays on GitHub Pages. -->
+  <iframe
+    id="srnr-office"
+    title="SRNR OFFICE — เข้าสู่ระบบและจัดการงาน"
+    src="https://script.google.com/macros/s/AKfycbzXQ-Q4MWWuo9Y0YGVjRjFZr9xBobVsiC1lzKfPKaaG_0YVDA-4OyIRGdtY_fv1L_ok/exec"
+    loading="eager"
+    allow="clipboard-read; clipboard-write"
+  ></iframe>
+  <noscript>กรุณาเปิดใช้งาน JavaScript เพื่อใช้ SRNR OFFICE</noscript>
 </body>
 </html>
