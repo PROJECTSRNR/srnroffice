@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="th" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#15447f">
+  <meta name="description" content="SRNR OFFICE ระบบบันทึกและรายงานผลการปฏิบัติงาน ศูนย์ดิจิทัลและสื่อสารองค์กร วิทยาลัยเทคนิคสุรนารี">
+  <title>SRNR OFFICE | วิทยาลัยเทคนิคสุรนารี</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Sarabun, system-ui, sans-serif;
+      --page-a:#143b77;--page-b:#457cce;--surface:#fff;--ink:#163253;--muted:#70829d;--line:#e5ecf6;--accent:#245db5;--gold:#e7aa39;--chip:#f2f6fc;--button-text:#fff;
+    }
+    html[data-theme="dark"] {
+      color-scheme:dark;--page-a:#0a1428;--page-b:#183b6c;--surface:#16263d;--ink:#edf4ff;--muted:#aec1de;--line:#344966;--accent:#477fe2;--chip:#203650;
+    }
+    html[data-theme="comfort"] {
+      color-scheme:light;--page-a:#57736c;--page-b:#a9b8a0;--surface:#f9f7ec;--ink:#354b3a;--muted:#6b786d;--line:#e3e6d6;--accent:#507e62;--chip:#eeefe3;
+    }
+    * {box-sizing:border-box}
+    body {margin:0; min-height:100dvh; color:var(--ink); background:linear-gradient(125deg,var(--page-a),var(--page-b)); font-family:inherit;}
+    body::before,body::after{content:"";position:fixed;pointer-events:none;border:1px solid rgba(255,255,255,.13);border-radius:50%;}
+    body::before{width:410px;height:410px;right:-135px;top:-160px}body::after{width:95px;height:95px;bottom:8%;right:9%}
+    main{max-width:1010px;min-height:100dvh;margin:auto;padding:48px 22px 30px;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:16px}
+    .card{width:min(100%,720px);background:var(--surface);border:1px solid rgba(255,255,255,.36);border-radius:24px;box-shadow:0 30px 85px rgba(0,13,44,.23);padding:34px 40px 38px;position:relative;overflow:hidden}
+    .card::before{content:"";height:6px;position:absolute;inset:0 0 auto;background:linear-gradient(90deg,#245db5,#79afff,var(--gold))}
+    .head{text-align:center}.logo{width:114px;height:114px;object-fit:contain;display:block;margin:0 auto 13px}.en{font-size:10px;letter-spacing:2.1px;color:#6b8cb4;font-weight:800;margin:0 0 4px}.title{font-size:clamp(31px,6vw,42px);margin:0;line-height:1.15;letter-spacing:-.6px;color:var(--ink)}.title em{font-style:normal;color:var(--gold)}
+    .desc{font-size:15px;color:var(--muted);line-height:1.7;margin:13px auto 23px}
+    .line{height:1px;background:var(--line);margin:2px 0 23px}
+    .eyebrow{color:var(--muted);font-weight:700;font-size:12px;letter-spacing:.6px;margin:0 0 11px}
+    .features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:24px}
+    .feature{border:1px solid var(--line);background:var(--chip);border-radius:13px;padding:14px 10px;text-align:center;font-size:12px;font-weight:600;line-height:1.5;min-height:83px}
+    .feature svg{display:block;width:25px;height:25px;margin:0 auto 8px;stroke:var(--accent);fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
+    .cta{display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;border-radius:10px;background:var(--accent);color:var(--button-text);font-size:16px;font-weight:800;padding:15px 18px;box-shadow:0 10px 22px rgba(13,63,148,.17);transition:transform .18s,filter .18s}
+    .cta:hover{filter:brightness(1.08);transform:translateY(-1px)}.cta:focus-visible,.mode:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    .note{text-align:center;color:var(--muted);font-size:12px;line-height:1.6;margin:13px 0 0}
+    .themes{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:0 0 12px}.mode{font:inherit;font-size:12px;color:var(--ink);border:1px solid var(--line);background:var(--chip);border-radius:99px;padding:6px 13px;cursor:pointer}.mode[aria-pressed=true]{color:var(--accent);border-color:var(--accent);font-weight:800}
+    .foot{font-size:12px;color:#fff;text-align:center;opacity:.85;line-height:1.8}
+    @media(max-width:520px){main{padding:26px 14px}.card{padding:31px 22px}.logo{width:99px;height:99px}.features{gap:7px}.feature{font-size:11px;padding:12px 5px}.desc{font-size:14px}}
+    @media(prefers-reduced-motion:reduce){.cta{transition:none}}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card" aria-label="ทางเข้าสู่ระบบ SRNR OFFICE">
+      <header class="head">
+        <img class="logo" src="assets/srnr-logo.png" alt="ตราสัญลักษณ์วิทยาลัยเทคนิคสุรนารี" width="114" height="114">
+        <p class="en">SURANAREE TECHNICAL COLLEGE</p>
+        <h1 class="title">SRNR <em>OFFICE</em></h1>
+        <p class="desc">ระบบบันทึกและรายงานผลการปฏิบัติงาน<br>ศูนย์ดิจิทัลและสื่อสารองค์กร</p>
+      </header>
+      <div class="line"></div>
+      <p class="eyebrow">ระบบจัดการงานภายในหน่วยงาน</p>
+      <div class="features" aria-label="ความสามารถหลัก">
+        <div class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10l3 3v13H4V4h3zm0 5h10M7 13h10M7 17h6"/></svg>
+          บันทึกผลการปฏิบัติงาน
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16h16M8 15l4-5 3 3 5-7"/></svg>
+          สรุปสถิติและรายงาน
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10a4 4 0 0 1 0 8h-2M17 17H7a4 4 0 0 1 0-8h2M9 12h6"/></svg>
+          หลักฐานและลิงก์ Drive
+        </div>
+      </div>
+      <a class="cta" href="https://script.google.com/macros/s/AKfycbzXQ-Q4MWWuo9Y0YGVjRjFZr9xBobVsiC1lzKfPKaaG_0YVDA-4OyIRGdtY_fv1L_ok/exec">เข้าสู่ระบบ SRNR OFFICE <span aria-hidden="true">→</span></a>
+      <p class="note">ใช้รหัสผ่านที่ได้รับอนุญาตในหน้าระบบจริง<br>ข้อมูลและไฟล์หลักฐานจัดเก็บผ่านบริการ Google ของวิทยาลัย</p>
+    </section>
+    <nav class="themes" aria-label="เปลี่ยนรูปแบบสี">
+      <button class="mode" type="button" data-theme="light" aria-pressed="true">☀️ สว่าง</button>
+      <button class="mode" type="button" data-theme="dark" aria-pressed="false">🌙 มืด</button>
+      <button class="mode" type="button" data-theme="comfort" aria-pressed="false">🌿 ถนอมสายตา</button>
+    </nav>
+    <footer class="foot">© SRNR OFFICE · วิทยาลัยเทคนิคสุรนารี<br>งานศูนย์ดิจิทัลและสื่อสารองค์กร</footer>
+  </main>
+  <script>
+    'use strict';
+    const modes=['light','dark','comfort'];
+    let mode='light';
+    try {const saved=localStorage.getItem('srnr-portal-theme'); if(modes.includes(saved)) mode=saved;} catch (_) {}
+    function setTheme(value) {
+      if (!modes.includes(value)) return;
+      document.documentElement.setAttribute('data-theme',value);
+      document.querySelectorAll('.mode').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.theme===value)));
+      try {localStorage.setItem('srnr-portal-theme',value)} catch (_) {}
+    }
+    document.querySelectorAll('.mode').forEach(button=>button.addEventListener('click',()=>setTheme(button.dataset.theme)));
+    setTheme(mode);
+  </script>
+</body>
+</html>
